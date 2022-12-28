@@ -1,0 +1,180 @@
+package com.company;
+
+public class Recursion {
+// 1 print no. in decreasing order
+    /*public static void printdec(int n)
+    {
+        if(n==1)
+        {
+        System.out.println(n);
+            return;
+        }
+        System.out.print(n+ " ");
+        printdec(n-1);
+    }
+    public static void main(String args[])
+    {
+         int n=10;
+         printdec(n);
+
+    }
+
+
+    // 2 print no. in increasing order
+    public static void printinc(int n) {
+        if (n == 1) {
+            System.out.print(n+ " ");
+            return;
+        }
+        printinc(n - 1);
+        System.out.print(n + " ");
+
+    }
+
+    public static void main(String args[]) {
+        int n = 10;
+        printinc(n);
+    }
+
+
+    //3. Factorial of N numbers
+    public static int facto(int n) {
+        int fact=1;
+        if (n == 0)
+        {
+            return 1;
+        }
+        int f1 = facto(n-1);
+        int f = n * facto(n-1);
+        return f;
+
+    }
+
+    public static void main(String args[]) {
+        int n = 5;
+        System.out.println(facto(n));
+
+    }
+
+     // 4 Sum of n natural number
+    public static int sum(int n) {
+        int sum =0;
+        if (n == 1)
+        {
+            return n;
+        }
+        int f1 = sum(n-1);
+        int f = n + sum(n-1);
+        return f;
+
+    }
+
+    public static void main(String args[]) {
+        int n = 4;
+        System.out.println(sum(n));
+
+    }
+
+
+
+    //5 Print nth fibonacci number
+    public static int fib(int n) {
+        int fib ;
+        if (n == 0 || n==1)
+        {
+            return n;
+        }
+        int fib1 = fib(n-1);
+        int fib2 = fib(n-2);
+        int fib3 =  fib1 +fib2;
+        return fib3;
+
+    }
+
+    public static void main(String args[]) {
+        int n = 5;
+        System.out.println(fib(n));
+
+    }
+
+
+
+    //6 check if a given no. is sorted or not
+    public static boolean issorted(int arr[],int i)
+    {
+        if(i==arr.length-1)
+        {
+            return true;
+        }
+        if(arr[i] > arr[i+1])
+        {
+            return false;
+        }
+        return issorted(arr, i+1);
+    }
+    public static void main(String args[])
+    {
+        int arr[] = {1,23,3,4,5};
+        System.out.println(issorted(arr,0));
+    }
+
+
+
+
+    //7 write a fun to find the first occurence of an element in an array
+     public static int firstoccur(int arr[], int key, int i)
+    {
+        if(i==arr.length)
+        {
+            return -1;
+        }
+        if(arr[i]==key)
+        {
+            return i;
+        }
+        return firstoccur(arr,key,i+1);
+    }
+    public static void main(String args[])
+    {
+        int arr[] = {1,23,3,4,5,7,5};
+        System.out.println( firstoccur(arr,5,0));
+    }
+
+
+
+    //7 write a fun to find the last occurence of an element in an array
+     public static int lastoccur(int arr[] ,int key , int i)
+     {
+         if(i==arr.length)
+         {
+             return -1;
+         }
+        int isfound = lastoccur(arr,key,i+1);
+         if(isfound == -1  && arr[i]==key)
+         {
+             return i;
+         }
+        return isfound;
+     }
+     public static void main(String args[])
+     {
+         int arr[] = {8,3,6,9,5,10,2,5,3};
+         System.out.println(lastoccur(arr,5,0));
+     }
+
+     */
+
+    //8 print x^n;
+    public static int powerofx(int x,int n)
+    {
+        if(n==0)
+        {
+            return 1;
+        }
+        return x * powerofx(x,n-1);
+    }
+    public static void main(String args[])
+    {
+        System.out.println(powerofx(2,5));
+    }
+
