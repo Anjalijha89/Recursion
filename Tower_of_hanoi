@@ -1,0 +1,19 @@
+
+    public static void Towerofhanoi(int n,char src,char dest,char helper)
+    {
+        if(n==1)
+        {
+            System.out.println("Move disk " + n + " from " + src + " to " + dest);
+            return;
+        }
+        Towerofhanoi(n-1,src,helper,dest);
+        System.out.println("Move disk " + n + " from " + src + " to " + dest);
+        Towerofhanoi(n-1,helper,dest,src);
+
+    }
+    public static void main(String args[])
+    {
+        Towerofhanoi(3, 'A','C','B');
+    }
+
+
